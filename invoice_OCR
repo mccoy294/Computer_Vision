@@ -1,0 +1,22 @@
+import cv2
+import pytesseract
+from pytesseract import Output
+
+#Find the optimal amount of confidence
+
+def opt_confidence_rate(conf_num, image_path = ""):
+
+  text = ocr_image(image_path, conf_num)
+  total_num = len(text)
+
+  blanks = 0
+  for x in text:
+    if x == ' ':
+      blanks += 1
+
+  return({'total_words': total_num, 'blanks': blanks, 'text': text})
+
+
+#Test the optimal confidence amount
+
+opt_confidence_rate(conf_num = 20, image_path ="/content/Packing_Slip_example.png")
