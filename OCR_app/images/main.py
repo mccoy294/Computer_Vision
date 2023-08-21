@@ -32,7 +32,7 @@ class OCR:
 
     def extract_text(self, img):
         # The command that extracts the text from the image
-        text = pytesseract.image_to_string(img, lang="por")
+        text = pytesseract.image_to_string(img, lang="eng")
         return text
 
     def show_analysis(self):
