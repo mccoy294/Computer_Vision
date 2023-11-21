@@ -15,7 +15,8 @@ from PIL import Image
 data_dir = 'data' 
 image_exts = ['jpeg','jpg', 'bmp', 'png']
 
-print(os.listdir(data_dir))
+for image_class in os.listdir(data_dir):
+    print(image_class)
 
 """for image_class in os.listdir(data_dir): 
     print(image_class)
